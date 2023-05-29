@@ -1,0 +1,26 @@
+{
+  "name": "update-local-iconfont",
+  "version": "1.0.5",
+  "description": "更新项目内阿里的iconfont文件目录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iconfont",
+    "update",
+    "update-iconfont",
+    "update-local-iconfont",
+    "update-ali-iconfont"
+  ],
+  "author": "magicyou",
+  "license": "ISC",
+  "dependencies": {
+    "compressing": "^1.9.0",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/router.git"
+  },
+}
