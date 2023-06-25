@@ -1,6 +1,6 @@
 {
   "name": "update-local-iconfont",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "更新项目内阿里的iconfont文件目录",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magicyou/update-local-iconfont"
-  }
+  },
+  "files": [
+    "example",
+    "lib",
+    "index.js",
+    "README.md"
+  ]
 }

@@ -6,6 +6,76 @@
   "description": "rasp saas版",
   "glyphs": [
     {
+      "icon_id": "35877941",
+      "name": "提示",
+      "font_class": "tishi1",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "35376077",
+      "name": "我复用的求助",
+      "font_class": "wofuyongdeqiuzhu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "35376086",
+      "name": "我解决的补丁",
+      "font_class": "wojiejuedebuding",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "35376096",
+      "name": "我的足迹",
+      "font_class": "footprint",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "35864027",
+      "name": "Group 427320926",
+      "font_class": "other_version",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "35376093",
+      "name": "解决补丁",
+      "font_class": "resolve_patch",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "35376079",
+      "name": "我发布的补丁",
+      "font_class": "publish_patch",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "35587640",
+      "name": "我使用的补丁",
+      "font_class": "my-patch",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "27302878",
+      "name": "导航-小头像",
+      "font_class": "daohang-xiaotouxiang",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "35376082",
+      "name": "我的求助",
+      "font_class": "wodeqiuzhu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
       "icon_id": "34143351",
       "name": "搜索",
       "font_class": "sousuo",
@@ -99,7 +169,7 @@
     {
       "icon_id": "35376091",
       "name": "我点赞的补丁",
-      "font_class": "wodianzandebuding",
+      "font_class": "dianzan_fill",
       "unicode": "e60d",
       "unicode_decimal": 58893
     },
@@ -113,7 +183,7 @@
     {
       "icon_id": "35376097",
       "name": "我收藏的补丁",
-      "font_class": "woshoucangdebuding",
+      "font_class": "shoucang_fill",
       "unicode": "e612",
       "unicode_decimal": 58898
     },
@@ -501,6 +571,13 @@
       "font_class": "tishi",
       "unicode": "e6d3",
       "unicode_decimal": 59091
+    },
+    {
+      "icon_id": "26800393",
+      "name": "操作-删除",
+      "font_class": "delete",
+      "unicode": "e6d9",
+      "unicode_decimal": 59097
     },
     {
       "icon_id": "26827464",
