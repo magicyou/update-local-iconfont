@@ -1,6 +1,6 @@
 {
   "name": "update-local-iconfont",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "更新项目内阿里的iconfont文件目录",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   "author": "magicyou",
   "license": "ISC",
   "dependencies": {
-    "compressing": "^1.9.0",
-    "request": "^2.88.2"
+    "axios": "^1.4.0",
+    "compressing": "^1.9.0"
   },
   "repository": {
     "type": "git",

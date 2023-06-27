@@ -6,6 +6,13 @@
   "description": "rasp saas版",
   "glyphs": [
     {
+      "icon_id": "36148791",
+      "name": "列表置顶切图",
+      "font_class": "liebiaozhidingqietu",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
       "icon_id": "35877941",
       "name": "提示",
       "font_class": "tishi1",

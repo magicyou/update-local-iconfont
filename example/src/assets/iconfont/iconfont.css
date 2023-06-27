@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3647633 */
-  src: url('iconfont.woff2?t=1687760536899') format('woff2'),
-       url('iconfont.woff?t=1687760536899') format('woff'),
-       url('iconfont.ttf?t=1687760536899') format('truetype');
+  src: url('iconfont.woff2?t=1687847898181') format('woff2'),
+       url('iconfont.woff?t=1687847898181') format('woff'),
+       url('iconfont.ttf?t=1687847898181') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-liebiaozhidingqietu:before {
+  content: "\e79b";
 }
 
 .icon-tishi1:before {

@@ -17,7 +17,7 @@ const update = new UpdateIconfont(
   {
     url: '',  // 必填；iconfont 下载接口，iconfont项目->‘下载至本地’按钮->从浏览器控制台获取没完整请求url，和完整cookie
     cookie: '',  // 必填；cookie
-    output: './src/assets/iconfont', // 必填；输出目录，推荐使用绝对路径
+    output: path.join(__dirname, './src/assets/iconfont' ), // 必填；输出目录，推荐使用绝对路径
     runDir: path.join(__dirname, './') // 选填；当前运行目录，默认当前在项目根目录
   }
 )
