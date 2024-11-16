@@ -28,9 +28,8 @@ update.main()
 
 ```json
 "script": {
-    ...,    //其它脚本命令
-    "update:iconfont": node update-iconfont.js
-    
+    //...,    //其它脚本命令
+    "update:iconfont": "node update-iconfont.js"
 }
 ```
 
