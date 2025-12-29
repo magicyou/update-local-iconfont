@@ -38,3 +38,10 @@ update.main()
 ```
 npm run update:iconfont
 ```
+
+
+## 版本说明
+| 版本 | node版本要求 |
+|------|-------|
+|1.2.0|node@^20|
+|1.3.0|node@^22|
