@@ -3,7 +3,7 @@ name: Publish to npm
 
 # 全局变量（可按需调整）
 env:
-  NPM_REGISTRY: https://registry.npmjs.org/
+  NPM_REGISTRY: 'https://registry.npmjs.org'
   NODE_VERSION: 22  # 改为 Node 22
 
 # 触发条件：
@@ -33,7 +33,7 @@ jobs:
         run: npm ci
 
       - name: Publish to npm 
-        run: npm publish
+        run: npm publish --access public
         # 传递 npm 令牌（从 GitHub Secret 读取，避免硬编码）
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
