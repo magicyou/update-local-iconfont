@@ -1,0 +1,35 @@
+# 工作流名称
+name: Publish to npm
+
+# 触发条件：
+on:
+  push:
+    tags:
+      - "v*" # 匹配所有以 v 开头的标签（如 v1.0.0）
+  workflow_dispatch: # 手动触发开关
+
+# 工作流任务
+jobs:
+  publish:
+    # 运行环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    # 任务步骤
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # 推荐 LTS 版本（如 18、20）
+          registry-url: https://registry.npmjs.org/ # 绑定 npm 官方源
+          cache: "npm" # 缓存 npm 依赖，加速构建
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish to npm 
+        run: npm publish
+        # 传递 npm 令牌（从 GitHub Secret 读取，避免硬编码）
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
