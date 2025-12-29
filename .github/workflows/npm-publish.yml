@@ -25,8 +25,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NPM_REGISTRY }}  # 推荐 LTS 版本（如 18、20）
-          registry-url: ${{ env.NODE_VERSION }}  # 绑定 npm 官方源
+          node-version: ${{ env.NODE_VERSION }}  # 推荐 LTS 版本（如 18、20）
+          registry-url: ${{ env.NPM_REGISTRY }}  # 绑定 npm 官方源
           cache: "npm" # 缓存 npm 依赖，加速构建
 
       - name: Install dependencies
