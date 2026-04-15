@@ -1,0 +1,39 @@
+# 工作流名称
+name: Publish to npm
+
+# 全局变量（可按需调整）
+env:
+  NPM_REGISTRY: 'https://registry.npmjs.org'
+  NODE_VERSION: 20  # 改为 Node 20
+
+# 触发条件：
+on:
+  push:
+    tags: ['v*']  
+  workflow_dispatch: # 手动触发开关
+
+# 工作流任务
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}  # 推荐 LTS 版本（如 18、20）
+          registry-url: ${{ env.NPM_REGISTRY }}  # 绑定 npm 官方源
+          cache: "npm" # 缓存 npm 依赖，加速构建
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
