@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magicyou/update-local-iconfont"
+    "url": "git+https://github.com/magicyou/update-local-iconfont.git"
   },
   "files": [
     "example",
