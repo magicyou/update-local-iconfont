@@ -4,33 +4,39 @@ name: Publish to npm
 # 全局变量（可按需调整）
 env:
   NPM_REGISTRY: 'https://registry.npmjs.org'
-  NODE_VERSION: 22  # 改为 Node 22
+  NODE_VERSION: 22  # 发布使用的 Node LTS 版本
 
 # 触发条件：
 on:
   push:
-    tags: ['v*']  
+    tags: ['v*']
   workflow_dispatch: # 手动触发开关
 
 # 工作流任务
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [20, 22, 24, 26] # 兼容性测试矩阵
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
       - run: npm ci
+      - run: npm test
 
   publish-npm:
-    needs: build
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}  # 推荐 LTS 版本（如 18、20）
+          node-version: ${{ env.NODE_VERSION }}
           registry-url: ${{ env.NPM_REGISTRY }}  # 绑定 npm 官方源
           cache: "npm" # 缓存 npm 依赖，加速构建
       - run: npm ci

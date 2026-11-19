@@ -15,3 +15,9 @@ yarn-error.log*
 
 # history
 /.history
+
+# temp
+/temp
+
+# example 运行产物
+/example/src
